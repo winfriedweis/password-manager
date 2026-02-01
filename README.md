@@ -1,6 +1,6 @@
 # 🔐 NUP - Noch Unbekanntes Programm
 
-> Eine moderne JavaFX Desktop-Authentifizierungs-App mit Multi-Datenbank-Support, Brute-Force-Schutz und Profilbild-Editor. Bereit für Erweiterungen.
+> Eine moderne JavaFX Desktop-Authentifizierungs-App mit Multi-Datenbank-Support, Brute-Force-Schutz und Profilbild-Editor. Bereit für Erweiterungen. Das Ziel ist es einen lokalen Passwort Manager zu programmieren mit zahlreichen Zusatzfunktionen. Der Titel der Anwendung ist aktuell NUP - Noch Unbekanntes Programm. Da es sich um ein Lernprojekt handelt kommen noch unterschiedliche Features dazu. In diesem Projekt wird getestet wie im Zeitalter der KI, LLMs als Lernpartner fungieren können. Nicht im Stil von Vibecoding sondern als Lernunterstützung mit Cross-Resource Prüfung zum erlenen sicherer Code Strukturen. 
 
 [![Java](https://img.shields.io/badge/Java-21-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](https://openjdk.org/)
 [![JavaFX](https://img.shields.io/badge/JavaFX-21.0.1-4A90D9?style=flat-square&logo=java&logoColor=white)](https://openjfx.io/)
@@ -215,7 +215,7 @@ Bei der Registrierung muss das Passwort folgende Kriterien erfüllen:
 
 Eine **ausführliche Schritt-für-Schritt Anleitung** mit Erklärungen aller Konzepte findest du in:
 
-📖 **[NUP-Anleitung-Neu.md](NUP-Anleitung-Neu.md)**
+📖 **[Anleitung_NUP.md](Anleitung_NUP.md)**
 
 Diese Anleitung ist anfängerfreundlich und erklärt:
 - JavaFX Grundlagen
@@ -240,7 +240,7 @@ Beiträge sind willkommen! Bitte erstelle einen Fork und einen Pull Request.
 
 ## 📝 Lizenz
 
-Dieses Projekt ist unter der MIT-Lizenz lizenziert. Siehe [LICENSE](LICENSE) für Details.
+Noch nicht festgelegt.
 
 ---
 
