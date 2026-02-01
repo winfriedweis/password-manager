@@ -6,7 +6,6 @@
 [![JavaFX](https://img.shields.io/badge/JavaFX-21.0.1-4A90D9?style=flat-square&logo=java&logoColor=white)](https://openjfx.io/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791?style=flat-square&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![Maven](https://img.shields.io/badge/Maven-3.9+-C71A36?style=flat-square&logo=apachemaven&logoColor=white)](https://maven.apache.org/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
 ---
 
