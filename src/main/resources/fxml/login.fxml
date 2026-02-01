@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.winfriedweis.nup.controller.LoginController"
+            styleClass="container"
+            minWidth="800" minHeight="600">
+
+    <!-- Settings Button oben rechts -->
+    <top>
+        <HBox alignment="CENTER_RIGHT" BorderPane.alignment="CENTER_RIGHT"
+              style="-fx-padding: 20px;">
+            <Button onAction="#handleOpenSettings"
+                    text="⚙"
+                    styleClass="icon-button"
+                    style="-fx-min-width: 40px; -fx-min-height: 40px;"/>
+        </HBox>
+    </top>
+
+    <!-- Login Card mittig -->
+    <center>
+        <StackPane>
+            <VBox alignment="CENTER" spacing="20"
+                  StackPane.alignment="CENTER"
+                  style="-fx-padding: 40px;">
+
+                <Label text="NUP - Login"
+                       styleClass="title-label"/>
+
+                <VBox spacing="20" maxWidth="420"
+                      styleClass="card">
+
+                    <Label text="Bitte melde dich mit deinem Konto an."
+                           styleClass="subtitle-label"/>
+
+                    <VBox spacing="8">
+                        <Label text="E-Mail oder Username"/>
+                        <TextField fx:id="emailField"
+                                   promptText="E-Mail oder Username eingeben"/>
+                    </VBox>
+
+                    <VBox spacing="8">
+                        <Label text="Passwort"/>
+                        <PasswordField fx:id="passwordField"
+                                       promptText="Passwort eingeben"/>
+                    </VBox>
+
+                    <Label fx:id="errorLabel"
+                           styleClass="error-label"
+                           visible="false"
+                           wrapText="true"/>
+
+                    <Button text="Anmelden"
+                            onAction="#handleLogin"
+                            maxWidth="Infinity"
+                            defaultButton="true"/>
+
+                    <Hyperlink text="Noch kein Konto? Hier registrieren."
+                               onAction="#handleOpenRegister"
+                               style="-fx-padding: 10px 0 0 0;"/>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+</BorderPane>

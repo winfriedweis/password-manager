@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.winfriedweis.nup.controller.RegisterController"
+            styleClass="container"
+            minWidth="800" minHeight="650">
+
+    <center>
+        <StackPane>
+            <VBox alignment="CENTER" spacing="20"
+                  StackPane.alignment="CENTER"
+                  style="-fx-padding: 40px;">
+
+                <Label text="Registrierung"
+                       styleClass="title-label"/>
+
+                <VBox spacing="18" maxWidth="450"
+                      styleClass="card">
+
+                    <Label text="Erstelle dein kostenloses Konto"
+                           styleClass="subtitle-label"/>
+
+                    <VBox spacing="8">
+                        <Label text="Benutzername"/>
+                        <TextField fx:id="usernameField"
+                                   promptText="3-20 Zeichen (a-z, 0-9, _)"/>
+                    </VBox>
+
+                    <VBox spacing="8">
+                        <Label text="E-Mail"/>
+                        <TextField fx:id="emailField"
+                                   promptText="deine@email.de"/>
+                    </VBox>
+
+                    <VBox spacing="8">
+                        <Label text="Passwort"/>
+                        <PasswordField fx:id="passwordField"
+                                       promptText="Mindestens 8 Zeichen"/>
+                    </VBox>
+
+                    <VBox spacing="8">
+                        <Label text="Passwort bestätigen"/>
+                        <PasswordField fx:id="confirmPasswordField"
+                                       promptText="Passwort wiederholen"/>
+                    </VBox>
+
+                    <Label fx:id="errorLabel"
+                           styleClass="error-label"
+                           visible="false"
+                           wrapText="true"/>
+
+                    <Label fx:id="successLabel"
+                           styleClass="success-label"
+                           visible="false"
+                           wrapText="true"/>
+
+                    <Button text="Registrieren"
+                            onAction="#handleRegister"
+                            maxWidth="Infinity"
+                            defaultButton="true"/>
+
+                    <Hyperlink text="Schon ein Konto? Zurück zum Login."
+                               onAction="#handleBackToLogin"
+                               style="-fx-padding: 10px 0 0 0;"/>
+                </VBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.winfriedweis.nup.controller.SettingsController"
+            styleClass="container"
+            minWidth="800" minHeight="600">
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true"
+                    style="-fx-background-color: transparent;">
+            <VBox alignment="CENTER" spacing="30"
+                  style="-fx-padding: 60px;">
+
+                <Label text="Einstellungen"
+                       styleClass="title-label"
+                       style="-fx-font-size: 36px;"/>
+
+                <!-- Profil-Einstellungen (nur sichtbar wenn eingeloggt) -->
+                <VBox fx:id="profileSection" spacing="20" maxWidth="600"
+                      styleClass="card" managed="false" visible="false">
+
+                    <Label text="Profil"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+                    <HBox spacing="20" alignment="CENTER_LEFT">
+                        <StackPane>
+                            <Circle radius="40" fill="#555555"/>
+                            <ImageView fx:id="profileImageView"
+                                       fitWidth="80" fitHeight="80"
+                                       preserveRatio="true">
+                                <clip>
+                                    <Circle radius="40" centerX="40" centerY="40"/>
+                                </clip>
+                            </ImageView>
+                        </StackPane>
+
+                        <VBox spacing="10">
+                            <Label fx:id="profileUsernameLabel"
+                                   style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                            <Button text="Profilbild ändern"
+                                    onAction="#handleChangeProfileImage"
+                                    styleClass="secondary-button"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+
+                <!-- Datenbank-Einstellungen -->
+                <VBox spacing="20" maxWidth="600"
+                      styleClass="card">
+
+                    <Label text="Datenbankverbindung"
+                           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+                    <VBox spacing="10">
+                        <Label text="Datenbanktyp"/>
+                        <ComboBox fx:id="dbTypeComboBox" maxWidth="Infinity"/>
+                    </VBox>
+
+                    <VBox spacing="10">
+                        <Label text="Host"/>
+                        <TextField fx:id="hostField" promptText="localhost"/>
+                    </VBox>
+
+                    <VBox spacing="10">
+                        <Label text="Port"/>
+                        <TextField fx:id="portField" promptText="Port"/>
+                    </VBox>
+
+                    <VBox spacing="10">
+                        <Label text="Datenbank-Name"/>
+                        <TextField fx:id="databaseField" promptText="nup_db"/>
+                    </VBox>
+
+                    <VBox spacing="10">
+                        <Label text="Benutzername"/>
+                        <TextField fx:id="dbUsernameField" promptText="Benutzername"/>
+                    </VBox>
+
+                    <VBox spacing="10">
+                        <Label text="Passwort"/>
+                        <PasswordField fx:id="dbPasswordField" promptText="Datenbank-Passwort"/>
+                    </VBox>
+
+                    <Label fx:id="statusLabel"
+                           styleClass="subtitle-label"/>
+
+                    <HBox spacing="15">
+                        <Button text="Verbindung testen"
+                                onAction="#handleTestConnection"
+                                styleClass="secondary-button"/>
+
+                        <Button text="Speichern"
+                                onAction="#handleSaveSettings"/>
+
+                        <Region HBox.hgrow="ALWAYS"/>
+
+                        <Button text="Zurück"
+                                onAction="#handleBack"
+                                styleClass="secondary-button"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
